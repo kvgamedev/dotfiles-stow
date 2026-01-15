@@ -1,3 +1,0 @@
-#! /usr/bin/env bash
-
-[[ -n "$2" ]] && ghostty -e "$1" -c "$2" || ghostty -e "$1"

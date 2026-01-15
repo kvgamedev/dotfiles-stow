@@ -1,0 +1,22 @@
+#! /usr/bin/env bash
+
+# [[ -n "$2" ]] && ghostty --class="ghostty.floating" -e "$1" -c "$2" || ghostty --class="ghostty.floating" -e "$1"
+
+args=()
+ghostty_options=()
+
+for arg in "$@"; do
+  case "$arg" in
+  -f)
+    ghostty_options+=(--class="ghostty.floating")
+    ;;
+  *)
+    args+=("$arg")
+    ;;
+  esac
+done
+
+[[ "${args[0]}" ]] && ghostty_options+=(-e "${args[0]}")
+[[ "${args[1]}" ]] && ghostty_options+=(-c "${args[1]}")
+
+ghostty "${ghostty_options[@]}"
