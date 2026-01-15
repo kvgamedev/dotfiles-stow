@@ -1,0 +1,54 @@
+@import "colors.css";
+
+* {
+  font-family: JetbrainsMono Nerd Font Propo;
+  font-size: 15px;
+  font-weight: bolder;
+  color: @on_surface;
+  min-height: 0;
+  margin: 0;
+  padding: 0 4;
+  border-radius: 20;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+.modules-right,
+.modules-left,
+.modules-center {
+  padding: 0 20;
+  background: @surface;
+  /* border: 1px solid @primary; */
+}
+
+#network,
+#bluetooth,
+#pulseaudio,
+#battery {
+  margin: 0 5;
+}
+
+#workspaces,
+#workspaces button,
+#workspaces button.active,
+#workspaces button.empty,
+#workspaces button.persistent,
+#workspaces button.special,
+#workspaces button.visible,
+#workspaces button.urgent,
+#workspaces button.hosting-monitor,
+#workspaces.workspace-label,
+#workspaces.taskbar-window,
+#workspaces.taskbar-window.active
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#workspaces button.active {
+  background: @primary_container;
+  color: @on_primary_container;
+}

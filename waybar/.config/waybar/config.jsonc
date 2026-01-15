@@ -1,0 +1,50 @@
+[
+  {
+    "height": 18,
+    "layer": "top",
+    "exclusive": true,
+
+    "margin-top": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "margin-bottom": 0,
+
+    "modules-right": [ "network", "bluetooth", "pulseaudio", "battery" ],
+    "modules-center": [ "clock" ],
+    "modules-left": [ "hyprland/workspaces" ],
+
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "󰤨",
+      "format-ethernet": "󰈁",
+      "format-disconnected": "󰤮",
+      "format-disabled": "󰤭",
+      "max-length": 50
+    },
+
+    "bluetooth": {
+      "format": "󰂯",
+      "format-on": "󰂯",
+      "format-connected": "󰂯",
+      "format-off": "󰂲",
+      "format-disabled": "󰂲",
+    },
+
+    "pulseaudio": {
+      "format": "",
+      "format-muted": "",
+    },
+
+    "battery": {
+      "format": "{icon}",
+      "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+      "format-charging": "{icon}󱐋",
+    },
+
+    "hyprland/workspaces": {
+      "format": "<sub>{icon}</sub>",
+      "persistent-workspaces": { "*": 5 },
+      "show-special": true,
+    },
+  },
+]

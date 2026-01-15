@@ -1,0 +1,10 @@
+palette = 2=#dcbed1
+palette = 10=#dcbed1
+palette = 4=#f4b2e2
+
+background = #181216
+foreground = #ecdfe5
+cursor-color = #ecdfe5
+cursor-text = #d2c2ca
+selection-background = #dcbed1
+selection-foreground = #3e2a39
