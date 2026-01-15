@@ -1,8 +1,21 @@
-palette = 2={{colors.secondary.default.hex}}
-palette = 10={{colors.secondary.default.hex}}
-palette = 4={{colors.primary.default.hex}}
+palette = 0 = {{colors.surface.default.hex}}
+palette = 1 = {{colors.error.default.hex}}
+palette = 2 = {{colors.on_surface.default.hex}}
+palette = 3 = #F9E2AF
+palette = 4 = {{colors.primary.default.hex}}
+palette = 5 = {{colors.secondary.default.hex}}
+palette = 6 = {{colors.tertiary.default.hex}}
+palette = 7 = #A6ADC8
+palette = 8 = #585B70
+palette = 9 = #F37799
+palette = 10= #89D88B
+palette = 11= #EBD391
+palette = 12= #74A8FC
+palette = 13= #F2AEDE
+palette = 14= #6BD7CA
+palette = 15= #BAC2DE
 
-background = {{colors.background.default.hex}}
+background = {{colors.surface.default.hex}}
 foreground = {{colors.on_surface.default.hex}}
 cursor-color = {{colors.on_surface.default.hex}}
 cursor-text = {{colors.on_surface_variant.default.hex}}

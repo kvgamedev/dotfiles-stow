@@ -19,11 +19,6 @@ post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings s
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
-# [templates.mako]
-# input_path = '~/.config/matugen/templates/mako'
-# output_path = '~/.config/mako/mako-colors'
-# post_hook = 'makoctl reload'
-
 [templates.qt5ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
 output_path = '~/.config/qt5ct/colors/matugen.conf'
@@ -49,3 +44,8 @@ output_path = '~/.config/btop/themes/matugen.theme'
 input_path = '~/.config/matugen/templates/dunstrc-colors'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
+
+# [templates.neovim]
+# input_path = '~/.config/matugen/templates/neovim/template.lua'
+# output_path = '~/.config/nvim/lua/plugins/generated.lua'
+# post_hook = 'pkill -SIGUSR1 nvim'
