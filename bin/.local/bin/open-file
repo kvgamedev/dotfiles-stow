@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+file=$(fzf --walker-root="/" --walker="file,dir,hidden")
+[[ "$file" ]] && xdg-open $file
