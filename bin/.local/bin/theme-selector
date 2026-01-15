@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+tmp=$(mktemp)
+yazi ~/Wallpapers --chooser-file $tmp
+[[ -s $tmp ]] || exit 0
+
+file=$(<"$tmp")
+awww img "$file"
+matugen image "$file"
+rm -f $tmp
