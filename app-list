@@ -4,6 +4,7 @@ base
 base-devel
 bluez
 bluez-utils
+brightnessctl
 btop
 chromium
 cliphist
