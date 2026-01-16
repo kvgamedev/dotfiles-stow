@@ -24,9 +24,6 @@ hyprland
 hyprpicker
 hyprpolkitagent
 hyprpwcenter
-jellyfin-mpv-shim
-jellyfin-server
-jellyfin-web
 keyd
 lazygit
 libnotify
@@ -49,13 +46,10 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 power-profiles-daemon
-prowlarr-bin
 qbittorrent-nox
-radarr-bin
 ripgrep
 slurp
 sof-firmware
-sonarr-bin
 starship
 stow
 sudo
