@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+file="$HOME/Pictures/Screenshots/$(date).png"
+if [[ "$1" = "-f" ]]; then
+  grim "$file"
+else
+  grim -g "$(slurp)" "$file"
+fi
+notify-send "Screenshot saved at\n$file"

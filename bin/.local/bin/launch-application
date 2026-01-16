@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 
-application=$(fd -e desktop . /usr/share/applications | fzf | xargs -xo basename)
+application=$(fd -e desktop . /usr/share/applications $HOME/.local/share/applications | fzf | xargs -xo basename)
 setsid gtk-launch $application >/dev/null 2>&1

@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+fullscreen=$(hyprctl activewindow | grep "fullscreen:" | awk '{print $2}')
+
+hyprctl dispatch cyclenext
+[[ "$fullscreen" == "2" ]] && hyprctl dispatch fullscreen

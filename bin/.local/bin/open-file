@@ -1,4 +1,15 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
-file=$(fzf --walker-root="/" --walker="file,dir,hidden")
-[[ "$file" ]] && xdg-open $file
+file=$(fzf --walker-root="/" --walker="file,dir,hidden") || exit
+mime=$(file --mime-type -b "$file")
+desktop=$(xdg-mime query default "$mime")
+application=$(fd "$desktop" /usr/share/applications $HOME/.local/share/applications)
+terminal=$(cat "$application" | rg "Terminal=")
+
+if [[ "$terminal" = "Terminal=true" ]]; then
+  nohup ~/.local/bin/open-ghostty "bash" "xdg-open '$file'" &
+else
+  nohup xdg-open "$file" >/dev/null 2>&1 &
+fi
+sleep 0.1
+exit
