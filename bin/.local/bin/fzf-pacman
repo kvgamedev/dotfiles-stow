@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+for arg in "$@"; do
+  case "$arg" in
+  -R)
+    pacman -Slq | fzf --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+    ;;
+  -S)
+    pacman -Qeq | fzf --preview 'pacman -Si {1}' | xargs -ro sudo pacman -R
+    ;;
+  esac
+done
