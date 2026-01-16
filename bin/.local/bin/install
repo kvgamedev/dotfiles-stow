@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+
+sudo pacman -S git base-devel
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
+makepkg -si
+cd ~
+rm -rf ~/yay
+yay --noconfirm -S $(cat ~/.dotfiles/bin/.local/bin/app-list)
+cd ~/.dotfiles
+stow *
+chsh -s /usr/bin/fish
+sudo rm -rf /etc/keyd
+sudo ln -sf "$(realpath ~/.config/keyd)" /etc/keyd
+sudo systemctl enable --now keyd
