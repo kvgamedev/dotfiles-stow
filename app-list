@@ -6,6 +6,7 @@ bluez
 bluez-utils
 brightnessctl
 btop
+chafa
 chromium
 cliphist
 dunst
@@ -17,6 +18,7 @@ fish
 fzf
 ghostty
 git
+grim
 gst-plugin-pipewire
 hyprland
 hyprpicker
@@ -51,6 +53,7 @@ prowlarr-bin
 qbittorrent-nox
 radarr-bin
 ripgrep
+slurp
 sof-firmware
 sonarr-bin
 starship
