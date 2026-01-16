@@ -9,7 +9,7 @@ rm -rf ~/yay
 yay --noconfirm -S $(cat ~/.dotfiles/bin/.local/bin/app-list)
 cd ~/.dotfiles
 stow *
-chsh -s /usr/bin/fish
+chsh -s /usr/bin/zsh
 sudo rm -rf /etc/keyd
 sudo ln -sf "$(realpath ~/.config/keyd)" /etc/keyd
 sudo systemctl enable --now keyd

@@ -14,7 +14,6 @@ efibootmgr
 eza
 fastfetch
 fd
-fish
 fzf
 ghostty
 git
@@ -65,3 +64,8 @@ yay-debug
 yazi
 zoxide
 zram-generator
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-history-substring-search
+zsh-syntax-highlighting
