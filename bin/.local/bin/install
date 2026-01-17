@@ -8,6 +8,7 @@ cd ~
 rm -rf ~/yay
 yay --noconfirm -S $(cat ~/.dotfiles/bin/.local/bin/app-list)
 cd ~/.dotfiles
+[[ ! -d "~/.local" ]] && mkdir ~/.local
 stow *
 chsh -s /usr/bin/zsh
 sudo rm -rf /etc/keyd
