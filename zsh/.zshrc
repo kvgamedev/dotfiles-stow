@@ -1,6 +1,3 @@
-
-# The following lines were added by compinstall
-
 zstyle ':completion:*' auto-description '%d'
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' insert-unambiguous true
@@ -19,7 +16,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
-bindkey -e
 
 alias cd="z"
 alias ls="eza --icons=auto"
