@@ -1,0 +1,195 @@
+-- local o = vim.o
+-- local autocmd = vim.api.nvim_create_autocmd
+-- local map = function(mode, key, command, description)
+-- 	vim.keymap.set(mode, key, command, { desc = description })
+-- end
+--
+-- --- OPTIONS ---
+-- o.swapfile = false
+-- o.autoindent = true
+-- o.breakindent = true
+-- o.copyindent = true
+-- o.clipboard = "unnamedplus"
+-- o.confirm = true
+-- o.laststatus = 3
+-- o.conceallevel = 2
+-- o.cursorline = true
+-- o.list = true
+-- o.listchars = "tab:  ,trail:,"
+-- o.scrolloff = 10
+--
+-- o.shiftwidth = 4
+-- o.tabstop = 4
+-- o.smartcase = true
+-- o.smartindent = true
+-- o.splitbelow = true
+-- o.splitright = true
+-- -- o.winblend = 50
+-- o.wrapmargin = 5
+-- o.showbreak = "󱞩 "
+-- o.signcolumn = "yes"
+-- o.winborder= "rounded"
+-- o.termguicolors = true
+--
+-- --- KEYMAPS ---
+--
+-- map("n", "<c-l>", "<c-w>l", "Focus Window Right")
+-- map("n", "<c-k>", "<c-w>k", "Focus Window Up")
+-- map("n", "<c-j>", "<c-w>j", "Focus Window DOwn")
+-- map("n", "<c-h>", "<c-w>h", "Focus Window Left")
+--
+-- map({ "n", "v", "o" }, "<a-h>", "0", "Beginning of Line")
+-- map({ "n", "v", "o" }, "<a-l>", "$", "End of Line")
+-- map({ "n", "v", "o" }, "<a-j>", "G", "Last Line")
+-- map({ "n", "v", "o" }, "<a-k>", "gg", "First Line")
+--
+-- map("n", "<c-d>", "<c-d>zz", "Jump Down Half Page and Recenter cursor" )
+-- map("n", "<c-u>", "<c-u>zz", "Jump Up Half Page and Recenter cursor" )
+-- map("n", "n", "nzz", "Next Match and Recenter" )
+-- map("n", "N", "Nzz", "Previous Match and Recenter" )
+--
+-- map("n", "<Esc>", vim.cmd.nohlsearch, "Remove Search Highlights" )
+-- map("n", "<leader>q", function() vim.api.nvim_buf_delete(0, { force = true }) end, "Delete Buffer")
+
+--- AUTOCOMMANDS ---
+-- autocmd("TextYankPost", {
+-- 	callback = function()
+-- 		vim.hl.on_yank()
+-- 	end,
+-- })
+--
+-- autocmd("VimResized", {
+-- 	callback = function()
+-- 		vim.cmd("tabdo wimcd =")
+-- 		vim.cmd("tabnext" .. vim.fn.tabpagenr())
+-- 	end,
+-- })
+--
+-- autocmd("LspAttach", {
+-- 	once = true,
+-- 	callback = function()
+-- 		vim.keymap.set("n", "gl", "<Nop>", { desc = "LSP" })
+-- 		vim.keymap.set("n", "gld", vim.lsp.buf.definition, { desc = "Goto Definition" })
+-- 		vim.keymap.set("n", "gli", vim.lsp.buf.implementation, { desc = "Goto Implementation" })
+-- 		vim.keymap.set("n", "glt", vim.lsp.buf.type_definition, { desc = "Goto Type Definition" })
+-- 		vim.keymap.set("n", "gln", vim.lsp.buf.rename, { desc = "Rename" })
+-- 		vim.keymap.set("n", "gla", vim.lsp.buf.code_action, { desc = "Code Actions" })
+-- 	end,
+-- })
+
+-- vim.pack.add({
+-- "https://github.com/nvim-mini/mini.nvim",
+-- "https://github.com/folke/snacks.nvim",
+--
+-- { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("*") },
+--
+-- { src = "https://github.com/catppuccin/nvim" , name = "catppuccin" },
+-- "https://github.com/lewis6991/gitsigns.nvim",
+-- "https://github.com/folke/which-key.nvim",
+-- "https://github.com/nvim-lualine/lualine.nvim",
+-- "https://github.com/nvim-treesitter/nvim-treesitter",
+-- "https://github.com/stevearc/conform.nvim",
+--
+-- "https://github.com/neovim/nvim-lspconfig",
+-- "https://github.com/mason-org/mason.nvim",
+-- "https://github.com/mason-org/mason-lspconfig.nvim",
+-- })
+--
+-- require("snacks").setup({
+-- 	input = { enabled = true },
+-- 	picker = { enabled = true },
+-- 	quickfile = { enabled = true },
+-- 	statuscolumn = { enabled = true },
+-- 	notify = { enabled = false },
+-- })
+-- 
+-- picker = require("snacks").picker
+-- map("n", "<leader>f", picker.files, "")
+-- map("n", "<leader>/", picker.grep, "")
+-- map("n", "<leader>*", picker.grep_word, "")
+-- map("n", "<leader>b", picker.buffers, "")
+-- map("n", "<leader>s/", picker.lines, "")
+-- map("n", "<leader>sc", picker.command_history, "")
+-- map("n", "<leader>sd", picker.diagnostics, "")
+-- map("n", "<leader>sh", picker.help, "")
+-- map("n", "<leader>sr", picker.resume, "")
+-- map("n", "<leader>s", picker.files, "")
+-- map("n", "<leader>su", picker.undo, "")
+-- map("n", "<c-w>t", require("snacks").terminal, "")
+-- map("n", "<leader>g", require("snacks").lazygit, "")
+--
+-- require("catppuccin").setup({ transparent_background = true })
+-- vim.cmd.colorscheme("catppuccin")
+--
+-- require("lualine").setup()
+--
+-- local files = require("mini.files")
+-- files.setup({ windows = { preview = true } })
+-- map("n", "<leader>s", "<Nop>", "Search")
+-- map("n", "<leader>e", files.open, "Explorer")
+--
+-- local icons = require("mini.icons")
+-- icons.setup()
+-- icons.mock_nvim_web_devicons()
+--
+-- require("mini.ai").setup()
+-- require("mini.align").setup()
+-- require("mini.comment").setup()
+-- require("mini.surround").setup()
+-- require("mini.notify").setup()
+-- require("mini.operators").setup()
+-- require("mini.bracketed").setup()
+-- require("mini.tabline").setup()
+-- require("mini.git").setup()
+-- require("mini.jump").setup()
+-- require("mini.jump2d").setup()
+-- require("mini.diff").setup({
+-- 	view = {
+-- 		style = "sign",
+-- 		signs = { add = "▏", change = "▏", delete = "▏" },
+-- 	},
+-- })
+--
+-- local hipatterns = require("mini.hipatterns")
+-- hipatterns.setup({
+-- 	highlighters = {
+-- 		fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+-- 		hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+-- 		todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+-- 		note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+-- 		hex_color = hipatterns.gen_highlighter.hex_color(),
+-- 	},
+-- })
+--
+-- vim.diagnostic.config({ virtual_text = true })
+--
+-- require("blink.cmp").setup({
+-- 	sources = {
+-- 		default = { "lsp", "path", "buffer", "snippets" },
+-- 	},
+-- 	fuzzy = { implementation = "prefer_rust_with_warning" },
+-- })
+--
+-- local wk = require("which-key")
+-- wk.setup({
+-- 	delay = 0,
+-- 	preset = "helix",
+-- 	show_help = false,
+-- })
+-- wk.add({
+-- 	{ "<leader>w", proxy = "<c-w>", desc = "Window" },
+-- })
+-- 
+-- require("nvim-treesitter").setup({
+-- 	auto_install = true,
+-- 	highlight = { enable = true },
+-- })
+-- 
+-- require("conform").setup({
+-- 	formatters_by_ft = {
+-- 		lua = { "stylua" },
+-- 		zig = { "zigfmt" },
+-- 		cpp = { "clang-format" },
+-- 	},
+-- })
+-- map("n", "glf", require("conform").format, "Format Buffer")
