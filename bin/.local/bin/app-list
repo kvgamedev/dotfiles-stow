@@ -46,6 +46,7 @@ pipewire-jack
 pipewire-pulse
 power-profiles-daemon
 qbittorrent-nox
+quickshell
 ripgrep
 slurp
 sof-firmware
@@ -60,12 +61,7 @@ wl-clipboard
 wpa_supplicant
 xdg-desktop-portal-hyprland
 yay
-yay-debug
 yazi
 zoxide
 zram-generator
 zsh
-zsh-autosuggestions
-zsh-completions
-zsh-history-substring-search
-zsh-syntax-highlighting
