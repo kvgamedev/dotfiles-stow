@@ -20,7 +20,7 @@ window#waybar {
 .modules-center {
   padding: 0 1.5em;
   background: alpha(@surface, 0.7);
-  border: 0.035em solid @outline_variant;
+  border: 1px solid @outline_variant;
   margin: 8px 8em 0px 8em;
 }
 
