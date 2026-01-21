@@ -1,15 +1,10 @@
 #! /usr/bin/env bash
 
-tmp=$(mktemp)
-yazi ~/Wallpapers --chooser-file $tmp
-[[ -s $tmp ]] || exit 0
-file=$(<"$tmp")
-rm -f $tmp
-
+file=$(cat ~/.config/hypr/wallpaper)
 theme=$(cat ~/.local/bin/theme-details | rg theme | awk '{print $2}' | rg light)
-[[ $theme != "light" ]] && theme="dark"
 
-awww img "$file"
+[[ $theme != "light" ]] && theme="light" || theme="dark"
+
 matugen image "$file" -m "$theme"
 echo "image: $file" >~/.local/bin/theme-details
 echo "theme: $theme" >>~/.local/bin/theme-details

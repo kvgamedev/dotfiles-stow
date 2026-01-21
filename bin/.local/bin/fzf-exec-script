@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+command=$(fd . ~/.local/bin/ | fzf)
+bash $command
