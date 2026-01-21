@@ -73,6 +73,7 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="$PATH:$HOME/.local/bin"
 
 # User configuration
 
