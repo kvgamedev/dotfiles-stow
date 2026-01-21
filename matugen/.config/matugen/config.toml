@@ -44,3 +44,7 @@ output_path = '~/.config/btop/themes/matugen.theme'
 input_path = '~/.config/matugen/templates/dunstrc-colors'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
+
+[templates.image]
+input_path = '~/.config/matugen/templates/image'
+output_path = '~/.config/hypr/wallpaper'
